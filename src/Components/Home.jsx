@@ -17,15 +17,12 @@ const Home = () => {
     business_locality: "",
     infra_ownership: "",
     establishment_area: "",
-    reason_for_location: "",
     market_research: "",
     primary_market: "",
     customers: "",
     seasonality: "",
     competition: "",
     suppliers: "",
-    marketing_avenues: "",
-    scaleup_potential: "",
   };
 
   const [formData, setFormData] = useState(initialState);
@@ -84,12 +81,14 @@ const Home = () => {
 
   return (
     <div>
-      <h1>Introduction</h1>
+      <h1 style={{ textAlign: "center", margin: "20px" }}>
+        LetsEndorse Assignment
+      </h1>
 
       <div className="container">
         <div className="left_container">
           <form>
-            <h1>Form Data</h1>
+            <h1>Introduction</h1>
             <div className="input_div">
               <label>Name</label>
               <input
@@ -223,61 +222,61 @@ const Home = () => {
             <div className="input_div">
               <label>Unique Selling Proposition</label>
 
-              <span>
+              <div className="input-checkbox">
                 <input
                   type="checkbox"
                   onChange={(e) => handleUsp(e)}
                   value="the entrepreneur's experience in this field"
                 />
                 <label>The entrepreneur's experience in this field.</label>
-              </span>
+              </div>
 
-              <span>
+              <div className="input-checkbox">
                 <input
                   type="checkbox"
                   onChange={(e) => handleUsp(e)}
                   value="innovative product/service"
                 />
                 <label>Innovative product/service.</label>
-              </span>
+              </div>
 
-              <span>
+              <div className="input-checkbox">
                 <input
                   type="checkbox"
                   onChange={(e) => handleUsp(e)}
                   value="high profit margin"
                 />
                 <label>High profit margin</label>
-              </span>
+              </div>
 
-              <span>
+              <div className="input-checkbox">
                 <input
                   type="checkbox"
                   onChange={(e) => handleUsp(e)}
                   value="high growth potential"
                 />
                 <label>High growth potential</label>
-              </span>
+              </div>
 
-              <span>
+              <div className="input-checkbox">
                 <input
                   type="checkbox"
                   onChange={(e) => handleUsp(e)}
                   value="superior customer support"
                 />
                 <label>Superior customer support</label>
-              </span>
+              </div>
 
-              <span>
+              <div className="input-checkbox" n>
                 <input
                   type="checkbox"
                   onChange={(e) => handleUsp(e)}
                   value="quality and affordable products/service"
                 />
                 <label>Quality and affordable products/service</label>
-              </span>
+              </div>
 
-              <span>
+              <div className="input-checkbox" an>
                 <input
                   type="checkbox"
                   onChange={(e) => handleUsp(e)}
@@ -286,9 +285,9 @@ const Home = () => {
                 <label>
                   High demand in the target market (forward linkage).
                 </label>
-              </span>
+              </div>
 
-              <span>
+              <div className="input-checkbox">
                 <input
                   type="checkbox"
                   onChange={(e) => handleUsp(e)}
@@ -297,34 +296,34 @@ const Home = () => {
                 <label>
                   Abundant supply of raw materials (backward linkage).
                 </label>
-              </span>
+              </div>
 
-              <span>
+              <div className="input-checkbox">
                 <input
                   type="checkbox"
                   onChange={(e) => handleUsp(e)}
                   value="wide range of products/services"
                 />{" "}
                 <label>Wide range of products/services.</label>
-              </span>
+              </div>
 
-              <span>
+              <div className="input-checkbox">
                 <input
                   type="checkbox"
                   onChange={(e) => handleUsp(e)}
                   value="robust value-chain of the business"
                 />{" "}
                 <label>Robust value-chain of the business</label>
-              </span>
+              </div>
 
-              <span>
+              <div className="input-checkbox">
                 <input
                   type="checkbox"
                   onChange={(e) => handleUsp(e)}
                   value="frequencyy of customer visits"
                 />{" "}
                 <label>Frequency of customer visits</label>
-              </span>
+              </div>
             </div>
 
             <h1>Location</h1>
@@ -411,95 +410,95 @@ const Home = () => {
 
             <div className="input_div">
               <label>Reason for selecting this location</label>
-              <span>
+              <div className="input-checkbox">
                 <input
                   type="checkbox"
                   onChange={(e) => handleReason_for_location(e)}
                   value="Nearness to market"
                 />{" "}
                 <label>Nearness to market</label>
-              </span>
+              </div>
 
-              <span>
+              <div className="input-checkbox">
                 <input
                   type="checkbox"
                   onChange={(e) => handleReason_for_location(e)}
                   value="Good footfall"
                 />{" "}
                 <label>Good footfall.</label>
-              </span>
+              </div>
 
-              <span>
+              <div className="input-checkbox">
                 <input
                   type="checkbox"
                   onChange={(e) => handleReason_for_location(e)}
                   value="Nearness to source of raw materials"
                 />{" "}
                 <label>Nearness to source of raw materials.</label>{" "}
-              </span>
+              </div>
 
-              <span>
+              <div className="input-checkbox">
                 <input
                   type="checkbox"
                   onChange={(e) => handleReason_for_location(e)}
                   value="Nearness to targeted customer demographics"
                 />{" "}
                 <label>Nearness to targeted customer demographics.</label>
-              </span>
+              </div>
 
-              <span>
+              <div className="input-checkbox">
                 <input
                   type="checkbox"
                   onChange={(e) => handleReason_for_location(e)}
                   value="Lesser competition around"
                 />{" "}
                 <label>Lesser competition around</label>
-              </span>
+              </div>
 
-              <span>
+              <div className="input-checkbox">
                 <input
                   type="checkbox"
                   onChange={(e) => handleReason_for_location(e)}
                   value="Access to permit/license of operate"
                 />{" "}
                 <label>Access to permite/license of operate</label>
-              </span>
+              </div>
 
-              <span>
+              <div className="input-checkbox">
                 <input
                   type="checkbox"
                   onChange={(e) => handleReason_for_location(e)}
                   value="Nearness to suppliers"
                 />{" "}
                 <label>Nearness to suppliers.</label>
-              </span>
+              </div>
 
-              <span>
+              <div className="input-checkbox">
                 <input
                   type="checkbox"
                   onChange={(e) => handleReason_for_location(e)}
                   value="Affordability (rent)"
                 />{" "}
                 <label>Affordability (rent).</label>
-              </span>
+              </div>
 
-              <span>
+              <div className="input-checkbox">
                 <input
                   type="checkbox"
                   onChange={(e) => handleReason_for_location(e)}
                   value="No rental overheads"
                 />{" "}
                 <label>No rental overheads.</label>
-              </span>
+              </div>
 
-              <span>
+              <div className="input-checkbox">
                 <input
                   type="checkbox"
                   onChange={(e) => handleReason_for_location(e)}
                   value="Other such factors"
                 />{" "}
                 <label>Other such factors.</label>
-              </span>
+              </div>
             </div>
 
             <h1>Target Market</h1>
@@ -601,7 +600,7 @@ const Home = () => {
 
             <div className="input_div">
               <label>Market Avenues</label>
-              <span>
+              <div className="input-checkbox">
                 <input
                   type="checkbox"
                   onChange={(e) => handleMarketing_avenues(e)}
@@ -610,58 +609,58 @@ const Home = () => {
                 <label>
                   Distribution of marketing material(pamphelets/flyers).
                 </label>
-              </span>
+              </div>
 
-              <span>
+              <div className="input-checkbox">
                 <input
                   type="checkbox"
                   onChange={(e) => handleMarketing_avenues(e)}
                   value="storefront/business branding"
                 />{" "}
                 <label>Storefront/business branding</label>
-              </span>
+              </div>
 
-              <span>
+              <div className="input-checkbox">
                 <input
                   type="checkbox"
                   onChange={(e) => handleMarketing_avenues(e)}
                   value="Seasonal discounts and offers"
                 />{" "}
                 <label>Seasonal discounts and offers.</label>
-              </span>
+              </div>
 
-              <span>
+              <div className="input-checkbox">
                 <input
                   type="checkbox"
                   onChange={(e) => handleMarketing_avenues(e)}
                   value="Cross-promotion"
                 />{" "}
                 <label>Cross-promotion</label>
-              </span>
+              </div>
 
-              <span>
+              <div className="input-checkbox">
                 <input
                   type="checkbox"
                   onChange={(e) => handleMarketing_avenues(e)}
                   value="Digital Marketing"
                 />{" "}
                 <label>Digital Marketing</label>
-              </span>
+              </div>
 
-              <span>
+              <div className="input-checkbox">
                 <input
                   type="checkbox"
                   onChange={(e) => handleMarketing_avenues(e)}
                   value="Word of mouth"
                 />{" "}
                 <label>Word of Mouth</label>
-              </span>
+              </div>
             </div>
 
             <h1>Scaling up potential</h1>
             <div className="input_div">
               <label>Aveneus of scaling up in future</label>
-              <span>
+              <div className="input-checkbox">
                 <input
                   type="checkbox"
                   onChange={(e) => handleScaleup_potential(e)}
@@ -670,9 +669,9 @@ const Home = () => {
                 <label>
                   Increasing the variety of product/service offering
                 </label>
-              </span>
+              </div>
 
-              <span>
+              <div className="input-checkbox">
                 <input
                   type="checkbox"
                   onChange={(e) => handleScaleup_potential(e)}
@@ -681,43 +680,43 @@ const Home = () => {
                 <label>
                   Expanding the current offering to other geographies
                 </label>
-              </span>
+              </div>
 
-              <span>
+              <div className="input-checkbox">
                 <input
                   type="checkbox"
                   onChange={(e) => handleScaleup_potential(e)}
                   value="opening more outlets"
                 />{" "}
                 <label>Opening more outlets</label>
-              </span>
+              </div>
 
-              <span>
+              <div className="input-checkbox">
                 <input
                   type="checkbox"
                   onChange={(e) => handleScaleup_potential(e)}
                   value="growing the scale of operation"
                 />{" "}
                 <label>Growing the scale of operation</label>
-              </span>
+              </div>
 
-              <span>
+              <div className="input-checkbox">
                 <input
                   type="checkbox"
                   onChange={(e) => handleScaleup_potential(e)}
                   value="building value-chain integrations"
                 />{" "}
                 <label>Building value-chain integrations</label>
-              </span>
+              </div>
 
-              <span>
+              <div className="input-checkbox">
                 <input
                   type="checkbox"
                   onChange={(e) => handleScaleup_potential(e)}
                   value="other allied revenue streams"
                 />{" "}
                 <label>Other allied revenue streams.</label>
-              </span>
+              </div>
             </div>
           </form>
         </div>
@@ -729,32 +728,57 @@ const Home = () => {
             <span> {formData.business_idea} </span>.
           </p>
 
-          <p>
-            This enterprise has been operational since{" "}
-            <span> {formData.age_of_establishment} </span> years and has been
-            serving its customers since then.
-          </p>
+          {formData.age_of_establishment !== "0" ? (
+            <p>
+              This enterprise has been operational since{" "}
+              <span> {formData.age_of_establishment} </span> years and has been
+              serving its customers since then.
+            </p>
+          ) : (
+            ""
+          )}
+
           <p>
             This establishment offers products/services like-{" "}
             <span> {formData.primary_product_service_offered} </span> to{" "}
             <span> {formData.offered_to} </span> .
           </p>
-          <p>
-            In addition, the enterprise shall also be involved in-{" "}
-            <span> {formData.secondary_product_service_offered} </span>
-          </p>
-          <p>
-            Other products of the enterprise shall include-{" "}
-            <span> {formData.processed_products} </span>
-          </p>
-          <p>
-            <span> {formData.name} </span> has relevant experience of{" "}
-            <span> {formData.relevant_experience} </span> years in this field.
-          </p>
-          <p>
-            The entrepreneur <span> {formData.skill_training} </span> in this
-            field of work.
-          </p>
+
+          {formData.secondary_product_service_offered !== "" ? (
+            <p>
+              In addition, the enterprise shall also be involved in-{" "}
+              <span> {formData.secondary_product_service_offered} </span>
+            </p>
+          ) : (
+            ""
+          )}
+
+          {formData.processed_products !== "" ? (
+            <p>
+              Other products of the enterprise shall include-{" "}
+              <span> {formData.processed_products} </span>
+            </p>
+          ) : (
+            ""
+          )}
+
+          {formData.processed_products !== "" ? (
+            <p>
+              <span> {formData.name} </span> has relevant experience of{" "}
+              <span> {formData.relevant_experience} </span> years in this field.
+            </p>
+          ) : (
+            ""
+          )}
+
+          {formData.skill_training !== "no formal skill training" || "" ? (
+            <p>
+              The entrepreneur <span> {formData.skill_training} </span> in this
+              field of work.
+            </p>
+          ) : (
+            ""
+          )}
 
           <p>
             The enterprise is uniquely positioned because of its -
@@ -766,7 +790,6 @@ const Home = () => {
               ))}
             </span>
           </p>
-
           <p>
             The <span> {formData.establishment_type} </span> is located in
             <span> {formData.business_locality} </span> area of
@@ -774,11 +797,17 @@ const Home = () => {
             <span> {formData.infra_ownership} </span>
             property.
           </p>
-          <p>
-            The size of the establishment is
-            <span> {formData.establishment_area} </span>
-            sq.ft.
-          </p>
+
+          {formData.establishment_area !== "0" ? (
+            <p>
+              The size of the establishment is
+              <span> {formData.establishment_area} </span>
+              sq.ft.
+            </p>
+          ) : (
+            ""
+          )}
+
           <p>
             This locality is selected because of -
             <span>
@@ -790,10 +819,16 @@ const Home = () => {
             </span>
             `
           </p>
-          <p>
-            <span> {formData.market_research} </span> and the range of products
-            and target market has been identified after that.
-          </p>
+
+          {formData.market_research !== "Not Conducted" ? (
+            <p>
+              <span> {formData.market_research} </span> and the range of
+              products and target market has been identified after that.
+            </p>
+          ) : (
+            ""
+          )}
+
           <p>
             The enterprise shall focus on offering its products/services to
             <span> {formData.primary_market} </span> markets.

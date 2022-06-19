@@ -7,12 +7,21 @@
   gap: 1rem;
 }
 
+.left_container {
+  background-color: #ded9d9eb;
+}
+.right_container {
+  background-color: #ded9d9eb;
+}
 .left_container,
 .right_container {
   width: 50%;
   padding: 1rem;
   border-radius: 10px;
   border: 1px solid black;
+}
+.right_container > p:first-child {
+  margin-top: 80px;
 }
 
 .input_div {
@@ -21,9 +30,19 @@
   gap: 0.5rem;
   margin: 1rem;
 }
+
 input {
-  height: 1.5rem;
+  height: 2rem;
+  border: none;
+  border-radius: 5px;
 }
-.right_container span {
+.right_container span,
+.input_div > label {
   font-weight: 700;
+}
+
+.input-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
