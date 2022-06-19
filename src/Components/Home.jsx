@@ -37,9 +37,11 @@ const Home = () => {
 
     if (name === "age_of_establishment" && value > 100) {
       setError(true);
+      return;
     } else {
       setError(false);
     }
+
     setFormData({ ...formData, [name]: value });
     console.log("formData:", formData);
   };
@@ -103,7 +105,7 @@ const Home = () => {
                 name="name"
                 placeholder="Name"
                 value={formData.name}
-                onChange={handleChange}
+                onInput={handleChange}
               />
             </div>
 
@@ -114,7 +116,7 @@ const Home = () => {
                 name="business_idea"
                 placeholder="Business idea"
                 value={formData.business_idea}
-                onChange={handleChange}
+                onInput={handleChange}
               />
             </div>
 
@@ -123,9 +125,9 @@ const Home = () => {
               <select
                 name="business_stage"
                 value={formData.business_stage}
-                onChange={handleChange}
+                onInput={handleChange}
               >
-                <option>---</option>
+                <option></option>
                 <option value="Start-up">Start-up</option>
                 <option value="Scale-up">Scale-up</option>
               </select>
@@ -159,7 +161,7 @@ const Home = () => {
                 name="primary_product_service_offered"
                 value={formData.primary_product_service_offered}
                 placeholder="Primary Products/Services offfered"
-                onChange={handleChange}
+                onInput={handleChange}
               />
             </div>
 
@@ -168,9 +170,9 @@ const Home = () => {
               <select
                 name="offered_to"
                 value={formData.offered_to}
-                onChange={handleChange}
+                onInput={handleChange}
               >
-                <option value="">---</option>
+                <option value=""></option>
                 <option value="End customers">End customers</option>
                 <option value="Wholesalers">Wholesalers</option>
                 <option value="Distributors">Distributors</option>
@@ -185,7 +187,7 @@ const Home = () => {
                 placeholder="Secondary Products/Services offfered"
                 name="secondary_product_service_offered"
                 value={formData.secondary_product_service_offered}
-                onChange={handleChange}
+                onInput={handleChange}
               />
             </div>
 
@@ -198,7 +200,7 @@ const Home = () => {
                 placeholder="Processed Products"
                 name="processed_products"
                 value={formData.processed_products}
-                onChange={handleChange}
+                onInput={handleChange}
               />
             </div>
 
@@ -209,7 +211,7 @@ const Home = () => {
                 name="relevant_experience"
                 value={formData.relevant_experience}
                 placeholder="Relevant Experience"
-                onChange={handleChange}
+                onInput={handleChange}
               />
             </div>
 
@@ -218,9 +220,9 @@ const Home = () => {
               <select
                 name="skill_training"
                 value={formData.skill_training}
-                onChange={handleChange}
+                onInput={handleChange}
               >
-                <option value="">---</option>
+                <option value=""></option>
                 <option value="no formal skill training">
                   No formal skill training
                 </option>
@@ -236,7 +238,7 @@ const Home = () => {
               <div className="input-checkbox">
                 <input
                   type="checkbox"
-                  onChange={(e) => handleUsp(e)}
+                  onInput={(e) => handleUsp(e)}
                   value="the entrepreneur's experience in this field"
                 />
                 <label>The entrepreneur's experience in this field.</label>
@@ -245,7 +247,7 @@ const Home = () => {
               <div className="input-checkbox">
                 <input
                   type="checkbox"
-                  onChange={(e) => handleUsp(e)}
+                  onInput={(e) => handleUsp(e)}
                   value="innovative product/service"
                 />
                 <label>Innovative product/service.</label>
@@ -254,7 +256,7 @@ const Home = () => {
               <div className="input-checkbox">
                 <input
                   type="checkbox"
-                  onChange={(e) => handleUsp(e)}
+                  onInput={(e) => handleUsp(e)}
                   value="high profit margin"
                 />
                 <label>High profit margin</label>
@@ -263,7 +265,7 @@ const Home = () => {
               <div className="input-checkbox">
                 <input
                   type="checkbox"
-                  onChange={(e) => handleUsp(e)}
+                  onInput={(e) => handleUsp(e)}
                   value="high growth potential"
                 />
                 <label>High growth potential</label>
@@ -272,7 +274,7 @@ const Home = () => {
               <div className="input-checkbox">
                 <input
                   type="checkbox"
-                  onChange={(e) => handleUsp(e)}
+                  onInput={(e) => handleUsp(e)}
                   value="superior customer support"
                 />
                 <label>Superior customer support</label>
@@ -281,7 +283,7 @@ const Home = () => {
               <div className="input-checkbox" n>
                 <input
                   type="checkbox"
-                  onChange={(e) => handleUsp(e)}
+                  onInput={(e) => handleUsp(e)}
                   value="quality and affordable products/service"
                 />
                 <label>Quality and affordable products/service</label>
@@ -290,7 +292,7 @@ const Home = () => {
               <div className="input-checkbox" an>
                 <input
                   type="checkbox"
-                  onChange={(e) => handleUsp(e)}
+                  onInput={(e) => handleUsp(e)}
                   value="high demand in the target market (forward linkage)"
                 />
                 <label>
@@ -301,7 +303,7 @@ const Home = () => {
               <div className="input-checkbox">
                 <input
                   type="checkbox"
-                  onChange={(e) => handleUsp(e)}
+                  onInput={(e) => handleUsp(e)}
                   value="abundant supply of raw materials (backward linkage)"
                 />{" "}
                 <label>
@@ -312,7 +314,7 @@ const Home = () => {
               <div className="input-checkbox">
                 <input
                   type="checkbox"
-                  onChange={(e) => handleUsp(e)}
+                  onInput={(e) => handleUsp(e)}
                   value="wide range of products/services"
                 />{" "}
                 <label>Wide range of products/services.</label>
@@ -321,7 +323,7 @@ const Home = () => {
               <div className="input-checkbox">
                 <input
                   type="checkbox"
-                  onChange={(e) => handleUsp(e)}
+                  onInput={(e) => handleUsp(e)}
                   value="robust value-chain of the business"
                 />{" "}
                 <label>Robust value-chain of the business</label>
@@ -330,7 +332,7 @@ const Home = () => {
               <div className="input-checkbox">
                 <input
                   type="checkbox"
-                  onChange={(e) => handleUsp(e)}
+                  onInput={(e) => handleUsp(e)}
                   value="frequencyy of customer visits"
                 />{" "}
                 <label>Frequency of customer visits</label>
@@ -343,7 +345,7 @@ const Home = () => {
               <select
                 name="establishment_type"
                 value={formData.establishment_type}
-                onChange={handleChange}
+                onInput={handleChange}
               >
                 <option value=""></option>
                 <option value="Factory">Factory</option>
@@ -369,7 +371,7 @@ const Home = () => {
                 name="business_area"
                 value={formData.business_area}
                 placeholder="Business area"
-                onChange={handleChange}
+                onInput={handleChange}
               />
             </div>
 
@@ -378,7 +380,7 @@ const Home = () => {
               <select
                 name="business_locality"
                 value={formData.business_locality}
-                onChange={handleChange}
+                onInput={handleChange}
               >
                 <option value=""></option>
                 <option value="Urban">Urban</option>
@@ -393,7 +395,7 @@ const Home = () => {
               <select
                 name="infra_ownership"
                 value={formData.infra_ownership}
-                onChange={handleChange}
+                onInput={handleChange}
               >
                 <option value=""></option>
                 <option value="Rented">Rented</option>
@@ -412,7 +414,7 @@ const Home = () => {
                 name="establishment_area"
                 value={formData.establishment_area}
                 placeholder="Establishment area"
-                onChange={handleChange}
+                onInput={handleChange}
               />
             </div>
 
@@ -421,7 +423,7 @@ const Home = () => {
               <div className="input-checkbox">
                 <input
                   type="checkbox"
-                  onChange={(e) => handleReason_for_location(e)}
+                  onInput={(e) => handleReason_for_location(e)}
                   value="Nearness to market"
                 />{" "}
                 <label>Nearness to market</label>
@@ -430,7 +432,7 @@ const Home = () => {
               <div className="input-checkbox">
                 <input
                   type="checkbox"
-                  onChange={(e) => handleReason_for_location(e)}
+                  onInput={(e) => handleReason_for_location(e)}
                   value="Good footfall"
                 />{" "}
                 <label>Good footfall.</label>
@@ -439,7 +441,7 @@ const Home = () => {
               <div className="input-checkbox">
                 <input
                   type="checkbox"
-                  onChange={(e) => handleReason_for_location(e)}
+                  onInput={(e) => handleReason_for_location(e)}
                   value="Nearness to source of raw materials"
                 />{" "}
                 <label>Nearness to source of raw materials.</label>{" "}
@@ -448,7 +450,7 @@ const Home = () => {
               <div className="input-checkbox">
                 <input
                   type="checkbox"
-                  onChange={(e) => handleReason_for_location(e)}
+                  onInput={(e) => handleReason_for_location(e)}
                   value="Nearness to targeted customer demographics"
                 />{" "}
                 <label>Nearness to targeted customer demographics.</label>
@@ -457,7 +459,7 @@ const Home = () => {
               <div className="input-checkbox">
                 <input
                   type="checkbox"
-                  onChange={(e) => handleReason_for_location(e)}
+                  onInput={(e) => handleReason_for_location(e)}
                   value="Lesser competition around"
                 />{" "}
                 <label>Lesser competition around</label>
@@ -466,7 +468,7 @@ const Home = () => {
               <div className="input-checkbox">
                 <input
                   type="checkbox"
-                  onChange={(e) => handleReason_for_location(e)}
+                  onInput={(e) => handleReason_for_location(e)}
                   value="Access to permit/license of operate"
                 />{" "}
                 <label>Access to permite/license of operate</label>
@@ -475,7 +477,7 @@ const Home = () => {
               <div className="input-checkbox">
                 <input
                   type="checkbox"
-                  onChange={(e) => handleReason_for_location(e)}
+                  onInput={(e) => handleReason_for_location(e)}
                   value="Nearness to suppliers"
                 />{" "}
                 <label>Nearness to suppliers.</label>
@@ -484,7 +486,7 @@ const Home = () => {
               <div className="input-checkbox">
                 <input
                   type="checkbox"
-                  onChange={(e) => handleReason_for_location(e)}
+                  onInput={(e) => handleReason_for_location(e)}
                   value="Affordability (rent)"
                 />{" "}
                 <label>Affordability (rent).</label>
@@ -493,7 +495,7 @@ const Home = () => {
               <div className="input-checkbox">
                 <input
                   type="checkbox"
-                  onChange={(e) => handleReason_for_location(e)}
+                  onInput={(e) => handleReason_for_location(e)}
                   value="No rental overheads"
                 />{" "}
                 <label>No rental overheads.</label>
@@ -502,7 +504,7 @@ const Home = () => {
               <div className="input-checkbox">
                 <input
                   type="checkbox"
-                  onChange={(e) => handleReason_for_location(e)}
+                  onInput={(e) => handleReason_for_location(e)}
                   value="Other such factors"
                 />{" "}
                 <label>Other such factors.</label>
@@ -515,7 +517,7 @@ const Home = () => {
               <select
                 name="market_research"
                 value={formData.market_research}
-                onChange={handleChange}
+                onInput={handleChange}
               >
                 <option value=""></option>
                 <option value="Not Conducted">Not Conducted</option>
@@ -530,7 +532,7 @@ const Home = () => {
               <select
                 name="primary_market"
                 value={formData.primary_market}
-                onChange={handleChange}
+                onInput={handleChange}
               >
                 <option value=""></option>
                 <option value="Local">Local</option>
@@ -547,7 +549,7 @@ const Home = () => {
                 name="customers"
                 value={formData.customers}
                 placeholder="Customers"
-                onChange={handleChange}
+                onInput={handleChange}
               />
             </div>
 
@@ -556,7 +558,7 @@ const Home = () => {
               <select
                 name="seasonality"
                 value={formData.seasonality}
-                onChange={handleChange}
+                onInput={handleChange}
               >
                 <option value=""></option>
                 <option value="Consistent sales across all seasons">
@@ -579,7 +581,7 @@ const Home = () => {
               <select
                 name="competition"
                 value={formData.competition}
-                onChange={handleChange}
+                onInput={handleChange}
               >
                 <option value=""></option>
                 <option value="No similar good/service provider in this locality">
@@ -601,7 +603,7 @@ const Home = () => {
                 name="suppliers"
                 value={formData.suppliers}
                 placeholder="Suppliers"
-                onChange={handleChange}
+                onInput={handleChange}
               />
             </div>
 
@@ -610,7 +612,7 @@ const Home = () => {
               <div className="input-checkbox">
                 <input
                   type="checkbox"
-                  onChange={(e) => handleMarketing_avenues(e)}
+                  onInput={(e) => handleMarketing_avenues(e)}
                   value="distribution of marketing material (pamphlets/flyers)"
                 />{" "}
                 <label>
@@ -621,7 +623,7 @@ const Home = () => {
               <div className="input-checkbox">
                 <input
                   type="checkbox"
-                  onChange={(e) => handleMarketing_avenues(e)}
+                  onInput={(e) => handleMarketing_avenues(e)}
                   value="storefront/business branding"
                 />{" "}
                 <label>Storefront/business branding</label>
@@ -630,7 +632,7 @@ const Home = () => {
               <div className="input-checkbox">
                 <input
                   type="checkbox"
-                  onChange={(e) => handleMarketing_avenues(e)}
+                  onInput={(e) => handleMarketing_avenues(e)}
                   value="Seasonal discounts and offers"
                 />{" "}
                 <label>Seasonal discounts and offers.</label>
@@ -639,7 +641,7 @@ const Home = () => {
               <div className="input-checkbox">
                 <input
                   type="checkbox"
-                  onChange={(e) => handleMarketing_avenues(e)}
+                  onInput={(e) => handleMarketing_avenues(e)}
                   value="Cross-promotion"
                 />{" "}
                 <label>Cross-promotion</label>
@@ -648,7 +650,7 @@ const Home = () => {
               <div className="input-checkbox">
                 <input
                   type="checkbox"
-                  onChange={(e) => handleMarketing_avenues(e)}
+                  onInput={(e) => handleMarketing_avenues(e)}
                   value="Digital Marketing"
                 />{" "}
                 <label>Digital Marketing</label>
@@ -657,7 +659,7 @@ const Home = () => {
               <div className="input-checkbox">
                 <input
                   type="checkbox"
-                  onChange={(e) => handleMarketing_avenues(e)}
+                  onInput={(e) => handleMarketing_avenues(e)}
                   value="Word of mouth"
                 />{" "}
                 <label>Word of Mouth</label>
@@ -670,7 +672,7 @@ const Home = () => {
               <div className="input-checkbox">
                 <input
                   type="checkbox"
-                  onChange={(e) => handleScaleup_potential(e)}
+                  onInput={(e) => handleScaleup_potential(e)}
                   value="increasing the variety of product/service offering"
                 />{" "}
                 <label>
@@ -681,7 +683,7 @@ const Home = () => {
               <div className="input-checkbox">
                 <input
                   type="checkbox"
-                  onChange={(e) => handleScaleup_potential(e)}
+                  onInput={(e) => handleScaleup_potential(e)}
                   value="expanding the current offering to other geographies"
                 />{" "}
                 <label>
@@ -692,7 +694,7 @@ const Home = () => {
               <div className="input-checkbox">
                 <input
                   type="checkbox"
-                  onChange={(e) => handleScaleup_potential(e)}
+                  onInput={(e) => handleScaleup_potential(e)}
                   value="opening more outlets"
                 />{" "}
                 <label>Opening more outlets</label>
@@ -701,7 +703,7 @@ const Home = () => {
               <div className="input-checkbox">
                 <input
                   type="checkbox"
-                  onChange={(e) => handleScaleup_potential(e)}
+                  onInput={(e) => handleScaleup_potential(e)}
                   value="growing the scale of operation"
                 />{" "}
                 <label>Growing the scale of operation</label>
@@ -710,7 +712,7 @@ const Home = () => {
               <div className="input-checkbox">
                 <input
                   type="checkbox"
-                  onChange={(e) => handleScaleup_potential(e)}
+                  onInput={(e) => handleScaleup_potential(e)}
                   value="building value-chain integrations"
                 />{" "}
                 <label>Building value-chain integrations</label>
@@ -719,7 +721,7 @@ const Home = () => {
               <div className="input-checkbox">
                 <input
                   type="checkbox"
-                  onChange={(e) => handleScaleup_potential(e)}
+                  onInput={(e) => handleScaleup_potential(e)}
                   value="other allied revenue streams"
                 />{" "}
                 <label>Other allied revenue streams.</label>
