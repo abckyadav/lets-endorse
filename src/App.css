@@ -24,3 +24,6 @@
 input {
   height: 1.5rem;
 }
+.right_container span {
+  font-weight: 700;
+}

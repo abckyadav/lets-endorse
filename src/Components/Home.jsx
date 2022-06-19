@@ -2,7 +2,8 @@ import React, { useState } from "react";
 
 const Home = () => {
   const initialState = {
-    uname: "",
+    name: "",
+    business_idea: "",
     business_stage: "",
     age_of_establishment: "",
     primary_product_service_offered: "",
@@ -93,9 +94,20 @@ const Home = () => {
               <label>Name</label>
               <input
                 type="text"
-                name="uname"
+                name="name"
                 placeholder="Name"
-                value={formData.uname}
+                value={formData.name}
+                onChange={handleChange}
+              />
+            </div>
+
+            <div className="input_div">
+              <label>Business Idea</label>
+              <input
+                type="text"
+                name="business_idea"
+                placeholder="Business idea"
+                value={formData.business_idea}
                 onChange={handleChange}
               />
             </div>
@@ -216,7 +228,7 @@ const Home = () => {
                   type="checkbox"
                   onChange={(e) => handleUsp(e)}
                   value="the entrepreneur's experience in this field"
-                />{" "}
+                />
                 <label>The entrepreneur's experience in this field.</label>
               </span>
 
@@ -225,7 +237,7 @@ const Home = () => {
                   type="checkbox"
                   onChange={(e) => handleUsp(e)}
                   value="innovative product/service"
-                />{" "}
+                />
                 <label>Innovative product/service.</label>
               </span>
 
@@ -234,8 +246,8 @@ const Home = () => {
                   type="checkbox"
                   onChange={(e) => handleUsp(e)}
                   value="high profit margin"
-                />{" "}
-                <label>High profit margin</label>{" "}
+                />
+                <label>High profit margin</label>
               </span>
 
               <span>
@@ -243,7 +255,7 @@ const Home = () => {
                   type="checkbox"
                   onChange={(e) => handleUsp(e)}
                   value="high growth potential"
-                />{" "}
+                />
                 <label>High growth potential</label>
               </span>
 
@@ -252,7 +264,7 @@ const Home = () => {
                   type="checkbox"
                   onChange={(e) => handleUsp(e)}
                   value="superior customer support"
-                />{" "}
+                />
                 <label>Superior customer support</label>
               </span>
 
@@ -261,7 +273,7 @@ const Home = () => {
                   type="checkbox"
                   onChange={(e) => handleUsp(e)}
                   value="quality and affordable products/service"
-                />{" "}
+                />
                 <label>Quality and affordable products/service</label>
               </span>
 
@@ -270,7 +282,7 @@ const Home = () => {
                   type="checkbox"
                   onChange={(e) => handleUsp(e)}
                   value="high demand in the target market (forward linkage)"
-                />{" "}
+                />
                 <label>
                   High demand in the target market (forward linkage).
                 </label>
@@ -376,6 +388,7 @@ const Home = () => {
                 value={formData.infra_ownership}
                 onChange={handleChange}
               >
+                <option value=""></option>
                 <option value="Rented">Rented</option>
                 <option value="Leased">Leased</option>
                 <option value="Self-owned">Self-owned</option>
@@ -711,105 +724,115 @@ const Home = () => {
 
         <div className="right_container">
           <p>
-            {formData.uname} is looking to {formData.business_stage} their
-            business of $business_idea.
+            <span> {formData.name} </span> is looking to{" "}
+            <span> {formData.business_stage} </span> their business of{" "}
+            <span> {formData.business_idea} </span>.
           </p>
 
           <p>
             This enterprise has been operational since{" "}
-            {formData.age_of_establishment} years and has been serving its
-            customers since then.
+            <span> {formData.age_of_establishment} </span> years and has been
+            serving its customers since then.
           </p>
           <p>
             This establishment offers products/services like-{" "}
-            {formData.primary_product_service_offered} to {formData.offered_to}.
+            <span> {formData.primary_product_service_offered} </span> to{" "}
+            <span> {formData.offered_to} </span> .
           </p>
           <p>
             In addition, the enterprise shall also be involved in-{" "}
-            {formData.secondary_product_service_offered}
+            <span> {formData.secondary_product_service_offered} </span>
           </p>
           <p>
             Other products of the enterprise shall include-{" "}
-            {formData.processed_products}
+            <span> {formData.processed_products} </span>
           </p>
           <p>
-            $name has relevant experience of {formData.relevant_experience}{" "}
-            years in this field.
+            <span> {formData.name} </span> has relevant experience of{" "}
+            <span> {formData.relevant_experience} </span> years in this field.
           </p>
           <p>
-            The entrepreneur {formData.skill_training} in this field of work.
+            The entrepreneur <span> {formData.skill_training} </span> in this
+            field of work.
           </p>
 
           <p>
             The enterprise is uniquely positioned because of its -
-            <div>
+            <span>
               {usp.map((item, i) => (
                 <ul key={i}>
                   <li>{item}</li>
                 </ul>
               ))}
-            </div>
+            </span>
           </p>
 
           <p>
-            The {formData.establishment_type} is located in
-            {formData.business_locality} area of $city in a $
-            {formData.infra_ownership}
+            The <span> {formData.establishment_type} </span> is located in
+            <span> {formData.business_locality} </span> area of
+            <span> {formData.business_area} </span> in a
+            <span> {formData.infra_ownership} </span>
             property.
           </p>
           <p>
-            The size of the establishment is {formData.establishment_area}{" "}
+            The size of the establishment is
+            <span> {formData.establishment_area} </span>
             sq.ft.
           </p>
           <p>
             This locality is selected because of -
-            <div>
+            <span>
               {reason_for_location.map((item, i) => (
                 <ul key={i}>
                   <li>{item}</li>
                 </ul>
               ))}
-            </div>
+            </span>
             `
           </p>
           <p>
-            {formData.market_research} and the range of products and target
-            market has been identified after that.
+            <span> {formData.market_research} </span> and the range of products
+            and target market has been identified after that.
           </p>
           <p>
             The enterprise shall focus on offering its products/services to
-            {formData.primary_market} markets.
+            <span> {formData.primary_market} </span> markets.
           </p>
-          <p>Our customers shall include- {formData.customers}</p>
+          <p>
+            Our customers shall include- <span> {formData.customers} </span>
+          </p>
           <p>
             The nature of the business is such that we expect
-            {formData.seasonality}.
+            <span> {formData.seasonality} </span>.
           </p>
-          <p>Regarding competition, there are {formData.competition}.</p>
+          <p>
+            Regarding competition, there are
+            <span> {formData.competition} </span>.
+          </p>
           <p>
             The enterprise shall procure goods/raw materials from
-            {formData.suppliers}.
+            <span> {formData.suppliers} </span> .
           </p>
           <p>
             Our marketing avenues to reach the targeted customers shall include-
-            <div>
+            <span>
               {marketing_avenues.map((item, i) => (
                 <ul key={i}>
                   <li>{item}</li>
                 </ul>
               ))}
-            </div>
+            </span>
           </p>
           <p>
             The various foreseeable avenues of scaling up and growing the
             business in the foreseeable future include-
-            <div>
+            <span>
               {scaleup_potential.map((item, i) => (
                 <ul key={i}>
                   <li>{item}</li>
                 </ul>
               ))}
-            </div>
+            </span>
           </p>
         </div>
       </div>
