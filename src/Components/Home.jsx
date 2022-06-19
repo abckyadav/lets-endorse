@@ -30,9 +30,16 @@ const Home = () => {
   const [reason_for_location, setReason_for_location] = useState([]);
   const [marketing_avenues, setMarketing_avenues] = useState([]);
   const [scaleup_potential, setScaleup_potential] = useState([]);
+  const [error, setError] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
+
+    if (name === "age_of_establishment" && value > 100) {
+      setError(true);
+    } else {
+      setError(false);
+    }
     setFormData({ ...formData, [name]: value });
     console.log("formData:", formData);
   };
@@ -135,8 +142,14 @@ const Home = () => {
                 max="100"
                 value={formData.age_of_establishment}
                 placeholder="Age of establishment"
-                onChange={handleChange}
+                onInput={handleChange}
               />
+
+              {error === true ? (
+                <p>Enter valid age of establishment between 0 to 100</p>
+              ) : (
+                ""
+              )}
             </div>
 
             <div className="input_div">
@@ -153,7 +166,6 @@ const Home = () => {
             <div className="input_div">
               <label>Offered to</label>
               <select
-                id="offered"
                 name="offered_to"
                 value={formData.offered_to}
                 onChange={handleChange}
@@ -204,7 +216,6 @@ const Home = () => {
             <div className="input_div">
               <label>Skill training</label>
               <select
-                id="skill"
                 name="skill_training"
                 value={formData.skill_training}
                 onChange={handleChange}
@@ -330,7 +341,6 @@ const Home = () => {
             <div className="input_div">
               <label>Establishment type</label>
               <select
-                id="type"
                 name="establishment_type"
                 value={formData.establishment_type}
                 onChange={handleChange}
@@ -366,7 +376,6 @@ const Home = () => {
             <div className="input_div">
               <label>Locality of business</label>
               <select
-                id="Locality"
                 name="business_locality"
                 value={formData.business_locality}
                 onChange={handleChange}
@@ -382,7 +391,6 @@ const Home = () => {
             <div className="input_div">
               <label>Ownership of infrastructure</label>
               <select
-                id="ownership"
                 name="infra_ownership"
                 value={formData.infra_ownership}
                 onChange={handleChange}
@@ -569,7 +577,6 @@ const Home = () => {
             <div className="input_div">
               <label>Competition</label>
               <select
-                id="competition"
                 name="competition"
                 value={formData.competition}
                 onChange={handleChange}
@@ -659,7 +666,7 @@ const Home = () => {
 
             <h1>Scaling up potential</h1>
             <div className="input_div">
-              <label>Aveneus of scaling up in future</label>
+              <label>Avenues of scaling up in future</label>
               <div className="input-checkbox">
                 <input
                   type="checkbox"
